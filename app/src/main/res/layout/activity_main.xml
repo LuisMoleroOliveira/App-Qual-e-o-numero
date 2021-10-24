@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+<com.google.android.material.appbar.MaterialToolbar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:title="Qual é o numero?"
+    app:menu="@menu/top_app_bar"
+    style="@style/Theme.Toolbar"
+
+    />
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        app:layout_constraintBottom_toTopOf="@id/textDisplay"
+        app:layout_constraintLeft_toLeftOf="@id/guide_start"
+        app:layout_constraintRight_toRightOf="@id/guide_end"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/textDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="100sp"
+        app:layout_constraintBottom_toTopOf="@id/editGuess"
+        app:layout_constraintLeft_toLeftOf="@id/guide_start"
+        app:layout_constraintRight_toRightOf="@id/guide_end"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Theme.Display"/>
+
+    <Button
+        android:id="@+id/newMatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nova Partida"
+        app:layout_constraintTop_toBottomOf="@+id/textDisplay"
+        app:layout_constraintRight_toRightOf="@id/guide_end"
+        app:layout_constraintLeft_toLeftOf="@id/guide_start"/>
+
+    <EditText
+        android:id="@+id/editGuess"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Digite o Palpite"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/guide_start"
+        app:layout_constraintRight_toLeftOf="@id/buttonSend"
+        android:layout_marginBottom="40dp"/>
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        app:layout_constraintBottom_toBottomOf="@id/editGuess"
+        app:layout_constraintRight_toRightOf="@id/guide_end"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/3"
+        app:layout_constraintRight_toRightOf="@+id/editGuess"
+        app:layout_constraintTop_toBottomOf="@+id/editGuess"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

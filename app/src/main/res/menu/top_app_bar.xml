@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Theme.Toolbar"
+    >
+
+ <item
+     android:id="@+id/menuTextSize"
+     android:icon="@drawable/ic_text_fields_24"
+     android:title="Tamanho do Texto"
+     android:contentDescription="Tamanho do Texto"
+     app:showAsAction="ifRoom"
+     />
+  <item
+      android:id="@+id/menuChangeColors"
+      android:icon="@drawable/ic_palette_24"
+      android:title="Alterar Cores"
+      android:contentDescription="Alterar Cores"
+      app:showAsAction="ifRoom"
+      />
+
+</menu>
